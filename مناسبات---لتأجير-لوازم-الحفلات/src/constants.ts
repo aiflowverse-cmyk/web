@@ -1,0 +1,165 @@
+import { Product, Review, Package, BlogPost } from "./types";
+
+export const PRODUCTS: Product[] = [
+  {
+    id: "1",
+    name: "كرسي ملكي ذهبي",
+    description: "كرسي فاخر بتصميم كلاسيكي مذهب، مريح وأنيق للمناسبات الكبيرة والزواجات.",
+    price: 25,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/6e3/abd/thumb_507_350_280_0_0_crop.jpg",
+    category: "كراسي",
+    rentalDuration: "24 ساعة",
+    includesSetup: true,
+  },
+  {
+    id: "2",
+    name: "كنبة مخمل فاخرة",
+    description: "كنبة مريحة من المخمل الفاخر بتصميم عصري، مثالية للمجالس والاجتماعات.",
+    price: 150,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/704/878/thumb_524_350_280_0_0_crop.jpg",
+    category: "كنبات",
+    rentalDuration: "24 ساعة",
+    includesSetup: true,
+  },
+  {
+    id: "3",
+    name: "خيمة أوروبية ملكية",
+    description: "خيمة عصرية مجهزة بالكامل مع إضاءة وتكييف، تناسب كافة الأحوال الجوية.",
+    price: 2500,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/671/fbb/fb0/thumb_557_250_180_0_0_crop.jpg",
+    category: "خيام",
+    rentalDuration: "يوم كامل",
+    includesSetup: true,
+  },
+  {
+    id: "4",
+    name: "طاولة طعام راقية",
+    description: "طاولة خشبية فاخرة مع مفارش ساتان وتنسيق متكامل.",
+    price: 80,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/704/88d/thumb_525_350_280_0_0_crop.jpg",
+    category: "طاولات",
+    rentalDuration: "24 ساعة",
+    includesSetup: true,
+  },
+  {
+    id: "5",
+    name: "جلسة شعبية متكاملة",
+    description: "تنسيق جلسات عربية تراثية بلمسة حديثة، مريحة وجميلة.",
+    price: 300,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/5f6/fe3/thumb_446_250_180_0_0_crop.jpg",
+    category: "ديكور",
+    rentalDuration: "24 ساعة",
+    includesSetup: true,
+  },
+  {
+    id: "6",
+    name: "كوشة زفاف ملكية",
+    description: "تصميم كوشة فريد مع تنسيق ورود طبيعية وإضاءة خيالية.",
+    price: 1200,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/6d4/d08/thumb_487_350_280_0_0_crop.jpg",
+    category: "ديكور",
+    rentalDuration: "يوم كامل",
+    includesSetup: true,
+  },
+];
+
+export const REVIEWS: Review[] = [
+  {
+    id: "1",
+    name: "سارة القحطاني",
+    event: "حفل زفاف",
+    city: "الرياض",
+    text: "الخدمة كانت استثنائية، المعدات وصلت في الوقت المحدد وبحالة ممتازة. الكوشة كانت خيالية!",
+    rating: 5,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/6d8/9b6/thumb_490_350_280_0_0_crop.jpg",
+  },
+  {
+    id: "2",
+    name: "محمد العتيبي",
+    event: "اجتماع عائلي",
+    city: "جدة",
+    text: "تعامل راقي جداً، الجلسات الشعبية كانت نظيفة ومرتبة. أنصح بهم بشدة.",
+    rating: 5,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/704/79a/thumb_518_350_280_0_0_crop.jpg",
+  },
+  {
+    id: "3",
+    name: "نورة الشهري",
+    event: "حفل تخرج",
+    city: "الدمام",
+    text: "الإضاءة والسماعات غيرت جو الحفلة تماماً. شكراً لفريق التركيب المحترف.",
+    rating: 4.8,
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/704/805/thumb_521_350_280_0_0_crop.jpg",
+  },
+];
+
+export const PACKAGES: Package[] = [
+  {
+    id: "p1",
+    name: "الباقة الفضية",
+    price: 1500,
+    type: 'silver',
+    features: [
+      "50 كرسي عادي",
+      "5 طاولات دائرية",
+      "إضاءة أساسية",
+      "توصيل مجاني (داخل المدينة)",
+    ],
+    notIncluded: [
+      "التركيب المعقد",
+      "سماعات ضخمة",
+      "بوفيه طعام",
+    ],
+  },
+  {
+    id: "p2",
+    name: "الباقة الذهبية",
+    price: 3500,
+    type: 'gold',
+    features: [
+      "100 كرسي ملكي",
+      "10 طاولات فاخرة",
+      "نظام صوتي متكامل",
+      "إضاءة ملونة",
+      "تركيب وتوصيل شامل",
+    ],
+    notIncluded: [
+      "بوفيه طعام",
+      "خيمة كبيرة",
+    ],
+  },
+  {
+    id: "p3",
+    name: "باقة VIP",
+    price: 8000,
+    type: 'vip',
+    features: [
+      "عدد غير محدود من الكراسي الملكية",
+      "كنبات VIP",
+      "خيمة أوروبية مكيفة",
+      "تنسيق ورود طبيعية",
+      "فريق ضيافة متكامل",
+      "تغطية تصوير فوتوغرافي",
+    ],
+    notIncluded: [],
+  },
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "b1",
+    title: "قائمة أهم الأشياء لحفلة تخرج لا تُنسى",
+    excerpt: "تعرف على الخطوات الأساسية لتنظيم حفل تخرج مميز، من اختيار المكان إلى تنسيق الإضاءة.",
+    content: "محتوى المقال هنا...",
+    date: "2024-05-15",
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/66f/6e1/072/thumb_501_350_280_0_0_crop.jpg",
+  },
+  {
+    id: "b2",
+    title: "كيف تختار حجم الخيمة المناسب لمناسبتك؟",
+    excerpt: "دليل شامل لمساعدتك في تحديد مساحة الخيمة بناءً على عدد الحضور ونوع الفعالية.",
+    content: "محتوى المقال هنا...",
+    date: "2024-06-01",
+    image: "https://hafalh.kaeef.com/storage/app/uploads/public/671/fbb/fb0/thumb_557_250_180_0_0_crop.jpg",
+  },
+];

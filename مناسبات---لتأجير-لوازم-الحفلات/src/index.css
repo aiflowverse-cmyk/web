@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-dark: #B8860B;
+  --color-brand-beige: #FDFBF7;
+  --color-brand-cream: #FFFDD0;
+  --color-brand-offwhite: #FAFAFA;
+  --color-brand-dark: #1A1A1A;
+}
+
+:root {
+  --bg: #FAFAFA;
+  --ink: #1A1A1A;
+  --gold: #D4AF37;
+  --beige: #FDFBF7;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--ink);
+  direction: rtl;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Luxury Card Effect */
+.luxury-card {
+  background: white;
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 30px 60px -15px rgba(212, 175, 55, 0.12);
+  transform: translateY(-12px);
+}
+
+/* Image Box Effect from Signflow */
+.image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  z-index: 1;
+}
+
+.image-box img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-box:hover img {
+  transform: scale(1.08);
+}
+
+.image-box .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 2rem 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  color: white;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: right;
+}
+
+.image-box:hover .caption {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Typography */
+.gold-text {
+  background: linear-gradient(135deg, #8B6B1B 0%, #D4AF37 50%, #8B6B1B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.heading-luxury {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* Buttons */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.1rem 2.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  background-color: var(--gold);
+  color: white;
+  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.4);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid var(--gold);
+}
+
+.btn-gold:hover {
+  background-color: #B8860B;
+  border-color: #B8860B;
+  box-shadow: 0 20px 40px -5px rgba(212, 175, 55, 0.6);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.1rem 2.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  background-color: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--gold);
+  color: white;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.3);
+}
+
+/* RTL Helpers */
+.rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Section Spacing */
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
